@@ -21,10 +21,11 @@ def crear_directorios_xp(EXPERIMENTO, DIRECTORIO="../EXPERIMENTOS/"):
 
 
 def cargar_datasets(filtrado=True):
-    productos = "../Datasets/tb_productos_descripcion.txt"
-    stocks = "../Datasets/tb_stocks.txt.gz"
-    sells = "../Datasets/sell-in.txt.gz"
-    prod_filtro = "../Datasets/productos_a_predecir.txt"
+    ROOT = "/home/fernando_damian_coz/buckets/b1/datasets/"
+    productos = ROOT+"tb_productos_descripcion.txt"
+    stocks = ROOT+"tb_stocks.txt.gz"
+    sells = ROOT+"sell-in.txt.gz"
+    prod_filtro = ROOT+"productos_a_predecir.txt"
 
     df_productos = pd.read_csv(productos, delimiter='\t')
     df_stocks = pd.read_csv(stocks, compression='gzip', delimiter='\t')
